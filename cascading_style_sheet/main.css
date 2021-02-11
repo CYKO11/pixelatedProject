@@ -5,6 +5,8 @@
 }
 
 a{
+    color: rgb(142,146,151);
+    padding-left: 0px
     text-decoration: none;
 }
 
@@ -59,3 +61,52 @@ header{
     border-radius: 5px;
     background: #006C87;            
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 0 0px;
+  }
+  
+  li {
+    line-height: 25px;
+    font-size: 14px;
+  }
+  
+  a, button {
+    cursor: hand;
+    cursor: pointer;
+  }
+  
+  a, link {
+    text-decoration: none;
+  }
+  
+  .site-width {
+    margin: 0 auto;
+    max-width: 1050px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .footer {
+    margin: 100px 0 0 0;
+    padding: 0 0 0 0;
+    background-color: rgb(32, 34, 37);
+    color: white;
+    height: 120px;
+  }
+  
+  .footer-links {
+    margin: 25px 0 0 0;
+    display: inline-block;
+    float: left;
+  }
+  
+  .footer-copyright {
+    float: right;
+    display: inline-block;
+    margin: 50px 0 0 0;
+    font-size: 14px;
+    color: rgb(142,146,151);
+  }
