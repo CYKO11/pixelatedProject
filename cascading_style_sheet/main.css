@@ -7,7 +7,18 @@
 a{
     text-decoration: none;
 }
+
+body{
+    
+            
+}
+
 header{
+    font-family: poppins;
+    font-weight: 600;
+    font-size: 16px; 
+    color: white;
+    background-color: black;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -16,7 +27,10 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 30px 70px;
+
 }
+
+
 .logo{
     cursor: pointer;
 }
@@ -44,8 +58,4 @@ header{
     padding: 10px 30px;
     border-radius: 5px;
     background: #006C87;            
-}
-
-body {
-    background-color: black;
 }
