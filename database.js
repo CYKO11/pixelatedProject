@@ -2,23 +2,24 @@ require('dotenv').config();
 
 var mysql = require('mysql');
 
-var con = mysql.createConnection ({
+var con = mysql.createConnection({
     host: process.env.HOST,
     user: process.env.DBUSER,
-    password: process.env.PASS
+    password: process.env.PASS,
+    port: process.env.DBPORT
 });
 
-con.connect(function(err){
-    if(err){
+con.connect(function (err) {
+    if (err) {
         throw err;
-    }else{
+    } else {
         console.log("Connected Successfully");
     }
 
-    con.query("CREATE DATABASE mydb", function(err, result){
-        if(err){
+    con.query("CREATE DATABASE mydb", function (err, result) {
+        if (err) {
             throw err;
-        }else{
+        } else {
             console.log("DATABASE CREATED SUCCESSFULLY")
             console.log(result);
         }
