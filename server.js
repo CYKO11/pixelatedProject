@@ -1,11 +1,10 @@
-var http = require('http');
-var fs = require('fs');
+const express = require('express');
+const server = express();
 
-http.createServer(function(req, res){
-    fs.readFile("hypertext_markup_language/Home.html", function(err, data){
-        res.writeHead(200, {"Content-Type": "text/html"});
-        res.write(data);
-        return res.end();
-    });
-}).listen(8080);
+server.use('/', express.static('hypertext_markup_language'));
+server.use('/css', express.static('cascading_style_sheet'));
+server.use('/js', express.static('javascript'));
 
+server.listen(8080, function() {
+	console.log("App started on port: 8080");
+});
