@@ -16,7 +16,7 @@ con.connect(function (err) {
         console.log("Connected Successfully");
     }
 
-    con.query("CREATE DATABASE mydb", function (err, result) {
+    con.query("CREATE DATABASE IF NOT EXISTS mydb", function (err, result) {
         if (err) {
             throw err;
         } else {
