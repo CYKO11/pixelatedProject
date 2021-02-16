@@ -201,3 +201,10 @@ p
   margin: 10px 0px 0px;
   padding: 0px 0px 0px 100px;
 }
+
+.games-form {
+  margin: 50px auto 0 auto;
+  max-width: 600px;
+  background-color: rgb(20,20,20);
+  padding: 25px 25px 50px 25px;
+}

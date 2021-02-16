@@ -13,4 +13,12 @@ router.get("/about", (req, res) => {
     res.render("about");
 });
 
+router.get("/games", (req, res) => {
+    res.render("games");
+});
+
+router.get("/cart", (req, res) => {
+    res.render("cart");
+});
+
 module.exports = router; // Lets you export the rounter
