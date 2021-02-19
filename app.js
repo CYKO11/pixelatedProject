@@ -4,6 +4,8 @@ const dotenv = require("dotenv");
 const path = require("path");
 const mysql = require("mysql");
 const publicDirectory = path.join(__dirname, "./public");
+const imgDirectory = path.join(__dirname, "./img");
+const javascript = path.join(__dirname, "./javascript");
 
 dotenv.config({ path: './.env' });
 
@@ -16,6 +18,8 @@ const db = mysql.createConnection({
 });
 app.set('view engine', 'hbs'); //View Template
 app.use(express.static(publicDirectory)); //For Css Connections
+app.use(express.static(imgDirectory));
+app.use(express.static(javascript));
 
 
 // Parses URL encoded Bodies as sent by the HTML Forms
@@ -27,7 +31,7 @@ app.use(express.urlencoded({
 app.use(express.json()); // Makes sure that the data that comes in via forms is of json format
 
 //Define Routes
-
+//            <input type="password" placeholder="Password Confirm" id="passwordConfirmSignUp" name="passwordConfirmSignUp"/>
 app.use("/", require("./routes/pages")); // Whenever access / check for access to those routes
 app.use("/auth", require("./routes/auth"));
 

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/login_register.css" />
-
     <title>Sign in & Sign up Form</title>
 </head>
 
@@ -18,11 +17,11 @@
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" id="username" name="username"/>
+                        <input type="text" placeholder="Username" id="username" name="username" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" id="password" name="password"/>
+                        <input type="password" placeholder="Password" id="password" name="password" />
                     </div>
                     <input type="submit" value="Login" class="btn solid" />
                     <p class="social-text">Or Sign in with social platforms</p>
@@ -41,21 +40,42 @@
                         </a>
                     </div>
                 </form>
-                <form action="#" class="sign-up-form">
+                <form action="/auth/register" class="sign-up-form" method="POST">
+
                     <h2 class="title">Sign up</h2>
+
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <input type="text" placeholder="Username" id="usernameSignUp" name="usernameSignUp" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email" />
+                        <input type="email" placeholder="Email" id="emailSignUp" name="emailSignUp" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-child"></i>
+                        <input type="text" placeholder="Age" id="age" name="age" />
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Address" id="address" name="address" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <input type="password" placeholder="Password" id="passwordSignUp" name="passwordSignUp" />
+
                     </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password Confirm" id="passwordConfirmSignUp"
+                            name="passwordConfirmSignUp" />
+
+                    </div>
+
                     <input type="submit" class="btn" value="Sign up" />
+                    {{#if message}}
+                    <h4 class "alert alert-danger mt-4">{{message}}</h4>
+                    {{/if}}
                     <p class="social-text">Or Sign up with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -105,7 +125,7 @@
         </div>
     </div>
 
-    <script src="js/Login.js"></script>
+    <script src="/front_end.js"></script>
 </body>
 
 </html>

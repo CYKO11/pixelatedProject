@@ -4,6 +4,7 @@ const router = express.Router(); //Makes sure we start the server with app
 const authController = require("../controllers/auth");
 
 router.post("/login", authController.login);
+router.post("/register", authController.register);
 
 
 

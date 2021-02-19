@@ -2,46 +2,137 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="/main.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <title>Home</title>
 </head>
 
 <body>
+
   <header>
     <p> PixelatedBros </p>
     <nav>
       <ul class="nav-area">
-        <li><a href="/">Home</a></li>
-        <li><a href="/games">Games</a></li>
+        <li><a href="/">home</a></li>
+        <li><a href="/products">Gallery</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/cart">Cart</a></li>
       </ul>
     </nav>
     <a href="#" class="btn-area">UserName</a>
   </header>
-  <form action="/auth/home" method="POST">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" ><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" ><br><br>
-    <input type="submit" value="Submit">
-  </form>
 
-  <footer class="footer">
-    <div class="site-width">
-      <p class="footer-copyright">&copy; Copyright Chad</p>
-      <div class="footer-links">
-        <ul>
-          <li> <a href="http://localhost:8080/">Home |</a> <a href="http://localhost:8080/about">About</a>
-          </li>
-          <li> <a href="http://localhost:8080/games">Games |</a> <a href="http://localhost:8080/cart">Cart</a>
-          </li>
-          <li> <a href="http://localhost:8080/Login.html">Login - Register</a> </li>
-        </ul>
+  <div class="slidershow middle">
+
+    <div class="slides">
+      <input type="radio" name="r" id="r1" checked>
+      <input type="radio" name="r" id="r2">
+      <input type="radio" name="r" id="r3">
+      <input type="radio" name="r" id="r4">
+      <input type="radio" name="r" id="r5">
+      <div class="slide s1">
+        <img src="1.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="/2.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="/3.jpg" alt="">
+      </div>
+      <div class="/slide">
+        <img src="/4.jpg" alt="">
+      </div>
+      <div class="slide">
+        <img src="/5.jpg" alt="">
       </div>
     </div>
-  </footer>
 
+    <div class="navigation">
+      <label for="r1" class="bar"></label>
+      <label for="r2" class="bar"></label>
+      <label for="r3" class="bar"></label>
+      <label for="r4" class="bar"></label>
+      <label for="r5" class="bar"></label>
+    </div>
+  </div>
+
+  <div id="half2">
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <table width="100%">
+      <col width="27%">
+      <col width="25%">
+      <col width="25%">
+      <col width="25%">
+
+      <tr>
+        <th>
+          <!-- icons -->
+          <i class="fab fa-xbox" id="icons"></i>
+          <p>The Xbox is a home video</p>
+          <p> game console and the first</p>
+          <p> installment in the Xbox series.</p>
+          <p>
+        </th>
+        <th>
+          <i class="fas fa-tv" id="icons"></i>
+          <p>
+          <p>Computers is one of</p>
+          <p> the first "consoles" people</p>
+          <p>played games on. </p>
+          <p>
+        </th>
+        <th>
+          <i class="fab fa-nintendo-switch" id="icons"></i>
+          <p>Nitendo Switch one of </p>
+          <p> the best portable consoles</p>
+          <p> on the market today.</p>
+        </th>
+        <th>
+          <i class="fab fa-playstation" id="icons"></i>
+          <p>Playstation one of xbox's</p>
+          <p>biggest competitors but still </p>
+          <p> of sales in xbox ahead</p>
+          <p>
+        </th>
+      </tr>
+    </table>
+    <p id="seperation"></p>
+    <table width="100%">
+      <tr>
+        <th style="margin-left:70%">
+          <i class="fab fa-android" id="icons"></i>
+          <p>Android is one of the mobile</p>
+          <p> gaming devices has lots of</p>
+          <p> games but is prone to viruses</p>
+        </th>
+        <th>
+          <i class="fab fa-apple" id="icons"></i>
+          <p>Apple is also a mobile gaming</p>
+          <p> device has less games than android</p>
+          <p> but are immune to viruses</p>
+          <p>
+        </th>
+      </tr>
+
+    </table>
+  </div>
+  <div id="footer">
+    <footer class="footer">
+      <div class="site-width">
+        <p class="footer-copyright">&copy; Copyright Chad</p>
+        <div class="footer-links">
+          <ul>
+            <li> <a href="./home.html">Home |</a> <a href="./about.html">About</a> </li>
+            <li> <a href="./games.html">Games |</a> <a href="./merch.html">Merch |</a> <a href="./cart.html">Cart</a>
+            </li>
+            <li> <a href="./login.html">Login - Register</a> </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 
 </html>

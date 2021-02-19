@@ -21,4 +21,8 @@ router.get("/cart", (req, res) => {
     res.render("cart");
 });
 
+router.get("/products", (req, res) => {
+    res.render("products");
+});
+
 module.exports = router; // Lets you export the rounter
