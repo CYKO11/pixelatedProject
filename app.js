@@ -29,7 +29,7 @@ app.use(express.json()); // Makes sure that the data that comes in via forms is 
 //Define Routes
 
 app.use("/", require("./routes/pages")); // Whenever access / check for access to those routes
-//app.use("/auth", require("./routes/auth"));
+app.use("/auth", require("./routes/auth"));
 
 db.connect((err) => {
     if (err) {
