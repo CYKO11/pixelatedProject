@@ -1,0 +1,24 @@
+[
+    {
+        "name" : "users",
+        "schema" : {
+            "id": "INT AUTO_INCREMENT primary key NOT NULL UNIQUE",
+            "name" : "VARCHAR(255)",
+            "surname" : "VARCHAR(255)",
+            "password" : "VARCHAR(255)",
+            "gender" : "INT",
+            "age" : "INT",
+            "email" : "VARCHAR(255) UNIQUE",
+            "token":"TEXT",
+            "admin":"INT DEFAULT 0"
+        }
+    },
+    {
+        "name" : "items",
+        "schema" : {
+            "name":"VARCHAR(255)",
+            "desc":"TEXT",
+            "img":"longblob"
+        }
+    }
+]
