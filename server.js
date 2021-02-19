@@ -12,7 +12,7 @@ const knex = require('knex')({
         password: process.env.DBPASS,
         database: process.env.DB
     },
-    pool: { min: 0, max: 10}
+    pool: { min: 0, max: 10 }
 });
 
 // set global var for daatabse connection pool

@@ -1,4 +1,4 @@
-const tables = require('./api/database/tables.json');
+const tables = require('./database/tables.json');
 const mysql = require('mysql');
 
 require('dotenv').config();
@@ -8,7 +8,7 @@ async function init(){
         host: process.env.HOST,
         port : process.env.DBPORT,
         user: process.env.DBUSER,
-        password: process.env.PASS
+        password: process.env.DBPASS
     });
     await connectPromise(conn);
 
@@ -21,7 +21,7 @@ async function init(){
         host: process.env.HOST,
         port : process.env.DBPORT,
         user: process.env.DBUSER,
-        password: process.env.PASS,
+        password: process.env.DBPASS,
         database: process.env.DB
     });
     await connectPromise(newConn);

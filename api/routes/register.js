@@ -1,9 +1,9 @@
 const router = require('express').Router();
 
-router.get('/newUser', async (req, res) => {
+router.get('/', async (req, res) => {
 
      // checking if all correct query values exist 
-     if (!(req.query.username && req.query.email && req.query.pass && req.query.mpass && req.query.age)){
+     if (!(req.query.username && req.query.email && req.query.password && req.query.mpassword && req.query.age)){
         res.sendStatus(400);
         return;
     }
@@ -19,16 +19,23 @@ router.get('/newUser', async (req, res) => {
     }
     
     // check password
-    if (req.query.pass !== req.query.mpass){
+    if (req.query.password !== req.query.mpassword){
         res.sendStatus(400);
         return;
     }
 
     // uploading data
     try {
-        db('users').insert(req.query);
+        var data = {
+            "username": req.query.username,
+            "email": req.query.email,
+            "age": req.query.age,
+            "password": req.query.password
+        }
+        await db('users').insert(data);
     } catch (err) {
         res.sendStatus(501);
+        console.log(err);
         return;
     }
 
