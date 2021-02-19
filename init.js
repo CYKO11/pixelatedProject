@@ -1,4 +1,4 @@
-const tables = require('./database/tables.json');
+const tables = require('./api/database/tables.json');
 const mysql = require('mysql');
 
 require('dotenv').config();

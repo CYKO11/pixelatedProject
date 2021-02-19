@@ -1,9 +1,22 @@
 require('dotenv').config();
 
-const express = require('express');
-const app = express();
+const app = require('express')();
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const knex = require('knex')({
+    client: 'mysql',
+    connection: {
+        host: process.env.HOST,
+        port: process.env.DBPORT,
+        user: process.env.DBUSER,
+        password: process.env.DBPASS,
+        database: process.env.DB
+    },
+    pool: { min: 0, max: 10}
+});
+
+// set global var for daatabse connection pool
+app.set('db', knex);
 
 // for backend request body
 app.use(cors());
