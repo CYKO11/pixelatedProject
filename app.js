@@ -6,6 +6,7 @@ const mysql = require("mysql");
 const publicDirectory = path.join(__dirname, "./public");
 const imgDirectory = path.join(__dirname, "./img");
 const javascript = path.join(__dirname, "./javascript");
+const cookieParser = require("cookie-parser")
 
 dotenv.config({ path: './.env' });
 
@@ -29,7 +30,7 @@ app.use(express.urlencoded({
 }));
 
 app.use(express.json()); // Makes sure that the data that comes in via forms is of json format
-
+app.use(cookieParser()); //Allows cookie setup in browser
 //Define Routes
 //            <input type="password" placeholder="Password Confirm" id="passwordConfirmSignUp" name="passwordConfirmSignUp"/>
 app.use("/", require("./routes/pages")); // Whenever access / check for access to those routes
